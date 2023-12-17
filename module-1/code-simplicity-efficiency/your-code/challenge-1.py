@@ -9,6 +9,43 @@ The code is very long and messy. Refactor it according to what you have learned 
 code simplicity and efficiency.
 """
 
+# SOLUCIÓN MODIFICADA
+
+print('Welcome to this calculator!')
+print('It can add and subtract whole numbers from 0 to 5')
+
+# El usuario debe escoger dos valores a,c numérico entre 0 y 5 además del valor de la operación b entre suma o resta
+
+a = input('Please choose your first number (0 to 5): ')
+b = input('What do you want to do? plus or minus: ')
+c = input('Please choose your second number (0 to 5): ')
+
+# Primero, haremos al usuario escoger la operación que quiere realizar
+
+if b == 'plus':
+   print(f'{a} plus {c} equals {a+c}')
+
+elif b == 'minus':
+   print(f'{a} plus {c} equals {a-c}')
+
+else:
+    print("I am not able to answer this question. Check your input and choose again between plus or minus.")
+
+# Segundo, escoger los valores para la operación escogida
+
+# Si a o c están por debajo de cero o por encima de 5 no puede realizar la operación. Añadimos esta condición:
+
+if (a < 0) or (a > 5) or (c < 0) or (c > 5):
+    print("Please, you are not choosing a number from the interval [0,5]")
+
+print("Thanks for using this calculator, goodbye :)")
+
+
+
+
+# SOLUCIÓN INICIAL
+
+"""
 print('Welcome to this calculator!')
 print('It can add and subtract whole numbers from zero to five')
 a = input('Please choose your first number (zero to five): ')
@@ -167,3 +204,5 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+
+"""
